@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- This is the main template for the site, with index.jsx building the content and behavior -->
+
+  <title>Hello React!</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script type="module" src="src/modal.js"></script>
+</head>
+<body>
+<div class="h-screen relative">
+  <turbo-frame id="modal-container" class="flex"><!--This is where the modal should go --></turbo-frame>
+  <div class="flex flex-1 p-4">
+    <div class="px-6">
+      <span class="font-bold">Instructions</span>
+      <ul class="ml-6 list-decimal">
+        <li>Open browser web console</li>
+        <li>Click the button to create a modal</li>
+        <li>Dismiss the modal by clicking one of the close buttons or Escape key</li>
+        <li>Press any key on your keyboard</li>
+      </ul>
+    </div>
+    <div
+        class="h-[250px] min-h-[1em] w-px self-stretch bg-gradient-to-tr from-transparent via-neutral-500 to-transparent opacity-20 dark:opacity-100"></div>
+
+    <div class="px-6">
+      <span class="font-bold">Result:</span>
+    <pre>
+        modal.js:303 Uncaught TypeError: Cannot read properties of null (reading 'keyboard')
+        at HTMLDocument.&lt;anonymous&gt; (modal.js:303:26)
+        at HTMLDocument.handler (event-handler.js:106:15)
+      </pre>
+    </div>
+  </div>
+  <hr
+      class="my-12 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50"/>
+
+  <div class="flex justify-center space-x-2">
+    <button id="create-modal-button"
+            class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+      Create Modal
+    </button>
+  </div>
+</div>
+</body>
+</html>
+
